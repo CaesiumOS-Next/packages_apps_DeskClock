@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 The Android Open Source Project
+     Copyright (C) 2025 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,11 +16,33 @@
 -->
 
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="@dimen/analog_clock_size"
-        android:height="@dimen/analog_clock_size"
-        android:viewportHeight="1176.0"
-        android:viewportWidth="1176.0">
+    android:width="@dimen/analog_clock_size"
+    android:height="@dimen/analog_clock_size"
+    android:viewportHeight="1176.0"
+    android:viewportWidth="1176.0">
+    <!-- Material 3 Expressive Dial Base Surface -->
+    <path
+        android:fillColor="#1AFFFFFF"
+        android:pathData="M588,78.9C306.8,78.9 78.9,306.8 78.9,588s227.9,509.1 509.1,509.1s509.1,-227.9 509.1,-509.1S869.2,78.9 588,78.9z" />
+    <!-- Outer Expressive Ring -->
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="12"
+        android:pathData="M588,118.9C328.9,118.9 118.9,328.9 118.9,588s210,469.1 469.1,469.1s469.1,-210 469.1,-469.1S847.1,118.9 588,118.9z" />
+    <!-- 12 o'clock Expressive Pill Marker -->
     <path
         android:fillColor="#FFFFFFFF"
-        android:pathData="M588,104.9c65.2,0 128.5,12.8 188,38c57.5,24.3 109.2,59.2 153.6,103.5c44.4,44.4 79.2,96 103.5,153.6c25.2,59.5 38,122.8 38,188s-12.8,128.5 -38,188c-24.3,57.5 -59.2,109.2 -103.5,153.6c-44.4,44.4 -96,79.2 -153.6,103.5c-59.5,25.2 -122.8,38 -188,38s-128.5,-12.8 -188,-38c-57.5,-24.3 -109.2,-59.2 -153.6,-103.5c-44.4,-44.4 -79.2,-96 -103.5,-153.6c-25.2,-59.5 -38,-122.8 -38,-188s12.8,-128.5 38,-188c24.3,-57.5 59.2,-109.2 103.5,-153.6s96,-79.2 153.6,-103.5C459.5,117.7 522.8,104.9 588,104.9M588,78.9C306.8,78.9 78.9,306.8 78.9,588s227.9,509.1 509.1,509.1s509.1,-227.9 509.1,-509.1S869.2,78.9 588,78.9L588,78.9z" />
+        android:pathData="M564,130h48v72h-48z" />
+    <!-- 3 o'clock Expressive Pill Marker -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M974,564h72v48h-72z" />
+    <!-- 6 o'clock Expressive Pill Marker -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M564,974h48v72h-48z" />
+    <!-- 9 o'clock Expressive Pill Marker -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M130,564h72v48h-72z" />
 </vector>

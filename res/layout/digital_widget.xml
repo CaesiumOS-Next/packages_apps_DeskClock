@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
-     Copyright (C) 2023 The LineageOS Project
+<!-- Copyright (C) 2008 The Android Open Source Project
+     Copyright (C) 2025 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -24,42 +24,27 @@
     android:layout_height="match_parent"
     android:background="@drawable/widget_background"
     android:backgroundTint="?appWidgetBackgroundTint"
-    android:gravity="center"
+    android:gravity="start|center_vertical"
     android:orientation="vertical"
     android:padding="@dimen/widget_padding"
     tools:theme="@style/Theme.DeskClock.DigitalWidgetDarkBg">
-
-    <TextClock
-        android:id="@+id/clock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:ellipsize="none"
-        android:format12Hour="@string/lock_screen_12_hour_format"
-        android:format24Hour="@string/lock_screen_24_hour_format"
-        android:includeFontPadding="false"
-        android:singleLine="true"
-        android:textAppearance="?appWidgetTextAppearancePrimary"
-        tools:text="0123"
-        tools:textColor="@android:color/white"
-        tools:textSize="@dimen/big_font_size" />
 
     <LinearLayout
         android:id="@+id/bottom_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-10dp">
+        android:layout_marginBottom="4dp">
 
         <TextClock
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
             android:ellipsize="none"
             android:includeFontPadding="false"
             android:singleLine="true"
             android:textAppearance="?appWidgetTextAppearancePrimaryLabel"
-            tools:text="01. Jan, 2023"
+            tools:text="Tue, Apr 3"
             tools:textColor="@android:color/white"
             tools:textSize="@dimen/label_font_size" />
 
@@ -67,7 +52,8 @@
             android:id="@+id/nextAlarmIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
             android:scaleType="fitCenter"
@@ -81,7 +67,8 @@
             android:id="@+id/nextAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
             android:ellipsize="none"
             android:includeFontPadding="false"
             android:singleLine="true"
@@ -92,11 +79,27 @@
 
     </LinearLayout>
 
+    <TextClock
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:ellipsize="none"
+        android:fontFamily="sans-serif-black"
+        android:format12Hour="@string/lock_screen_12_hour_format"
+        android:format24Hour="@string/lock_screen_24_hour_format"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textAppearance="?appWidgetTextAppearancePrimary"
+        tools:text="11:35"
+        tools:textColor="@android:color/white"
+        tools:textSize="@dimen/big_font_size" />
+
     <ListView
         android:id="@+id/world_city_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top"
+        android:layout_gravity="start|top"
         android:layout_marginTop="10dp"
         android:divider="@null"
         android:visibility="gone"

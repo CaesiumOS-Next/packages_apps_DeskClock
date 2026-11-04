@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 The Android Open Source Project
+     Copyright (C) 2025 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,12 +16,16 @@
 -->
 
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="@dimen/analog_clock_size"
-        android:height="@dimen/analog_clock_size"
-        android:viewportHeight="1176.0"
-        android:viewportWidth="1176.0"
-        android:tint="?attr/colorAccent">
+    android:width="@dimen/analog_clock_size"
+    android:height="@dimen/analog_clock_size"
+    android:viewportHeight="1176.0"
+    android:viewportWidth="1176.0"
+    android:tint="?attr/colorAccent">
+    <!-- Material 3 Expressive Accent Second Hand -->
     <path
         android:fillColor="#FF000000"
-        android:pathData="M588,739.3L588,739.3c-2.2,0 -4,-1.8 -4,-4v-544c0,-2.2 1.8,-4 4,-4l0,0c2.2,0 4,1.8 4,4v544C592,737.5 590.2,739.3 588,739.3z" />
+        android:pathData="M584,180h8v600h-8z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M588,750c18,0 32,14 32,32s-14,32 -32,32s-32,-14 -32,-32s14,-32 32,-32z" />
 </vector>

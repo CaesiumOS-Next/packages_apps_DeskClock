@@ -286,10 +286,10 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         rv.setTextViewTextSize(R.id.date, COMPLEX_UNIT_PX, sizes.mFontSizePx);
         rv.setTextViewTextSize(R.id.nextAlarm, COMPLEX_UNIT_PX, sizes.mFontSizePx);
         rv.setTextViewTextSize(R.id.clock, COMPLEX_UNIT_PX, sizes.mClockFontSizePx);
-        // Shift the bottom view up by half of the non-removable TextView padding
-        rv.setViewLayoutMargin(R.id.bottom_view, RemoteViews.MARGIN_TOP,
+        // Set bottom margin for date/alarm header above clock
+        rv.setViewLayoutMargin(R.id.bottom_view, RemoteViews.MARGIN_BOTTOM,
                 sizes.mBottomViewMarginTopPx, COMPLEX_UNIT_PX);
-        rv.setViewPadding(R.id.bottom_view, 0, 0, 0, sizes.mBottomViewPaddingBottomPx);
+        rv.setViewPadding(R.id.bottom_view, 0, 0, 0, 0);
 
         final int smallestWorldCityListSizePx =
                 resources.getDimensionPixelSize(R.dimen.widget_min_world_city_list_size);
@@ -451,16 +451,11 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         nextAlarm.setTextSize(COMPLEX_UNIT_PX, measuredSizes.mFontSizePx);
         nextAlarmIcon.setTextSize(COMPLEX_UNIT_PX, measuredSizes.mIconFontSizePx);
         nextAlarmIcon.setPadding(measuredSizes.mIconPaddingPx, 0, measuredSizes.mIconPaddingPx, 0);
-        // We want to shift the date line up by half the invisible padding of the clock (which is
-        // 33% of the font size)
-        measuredSizes.setBottomViewMarginPx(-1 * (int)(measuredSizes.mClockFontSizePx * 0.33 / 2));
-        // We want the bottom padding of the date be equal to the top padding of the clock
-        measuredSizes.setBottomViewPaddingPx(
-                (int)(measuredSizes.mClockFontSizePx * 0.28 - measuredSizes.mFontSizePx * 0.33));
-        bottomView.setPadding(0, 0, 0, measuredSizes.getBottomViewPaddingPx());
+        measuredSizes.setBottomViewMarginPx((int)(measuredSizes.mClockFontSizePx * 0.15f));
+        bottomView.setPadding(0, 0, 0, 0);
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams)
                 bottomView.getLayoutParams();
-        layoutParams.topMargin = measuredSizes.getBottomViewMarginTopPx();
+        layoutParams.bottomMargin = measuredSizes.getBottomViewMarginTopPx();
         bottomView.setLayoutParams(layoutParams);
 
         // Measure and layout the sizer.
@@ -527,7 +522,6 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         private int mIconPaddingPx;
 
         private int mBottomViewMarginTopPx;
-        private int mBottomViewPaddingBottomPx;
 
         private Sizes(int targetWidthPx, int targetHeightPx, int largestClockFontSizePx) {
             mTargetWidthPx = targetWidthPx;
@@ -549,11 +543,6 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         private int getBottomViewMarginTopPx() { return mBottomViewMarginTopPx; }
         private void setBottomViewMarginPx(int bottomViewMarginPx) {
             mBottomViewMarginTopPx = bottomViewMarginPx;
-        }
-
-        private int getBottomViewPaddingPx() { return mBottomViewPaddingBottomPx; }
-        private void setBottomViewPaddingPx(int bottomViewPaddingPx) {
-            mBottomViewPaddingBottomPx = bottomViewPaddingPx;
         }
 
         /**
