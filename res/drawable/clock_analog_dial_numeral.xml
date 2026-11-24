@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/analog_clock_size"
+    android:height="@dimen/analog_clock_size"
+    android:viewportWidth="1176"
+    android:viewportHeight="1176">
+    <group>
+        <clip-path android:pathData="M588,588 m-500,0 a500,500 0 1,0 1000,0 a500,500 0 1,0 -1000,0 Z" />
+    <path
+        android:fillColor="@color/clock_face_dial"
+        android:pathData="M588,588 m-500,0 a500,500 0 1,0 1000,0 a500,500 0 1,0 -1000,0 Z" />
+    <path
+        android:fillColor="@color/clock_face_numeral"
+        android:pathData="M443 195V141H537.2V389.2H476.6V195ZM571.8 334.1Q605.2 306.5 624.4 288.9Q643.6 271.2 656.8 251.8Q670.1 232.4 670.1 214.1Q670.1 200.1 663.6 192.3Q657.2 184.5 644.3 184.5Q631.3 184.5 624 194.2Q616.7 203.9 616.7 221.5H560.6Q561.3 192.6 573 173.3Q584.8 153.9 604 144.7Q623.2 135.5 646.6 135.5Q687.1 135.5 707.7 156.3Q728.2 177 728.2 210.3Q728.2 246.7 703.4 277.8Q678.6 308.9 640.2 338.5H732V385.8H561.3V342.6Q572.9 333.4 571.8 334.1Z" />
+    <path
+        android:fillColor="@color/clock_face_numeral"
+        android:pathData="M929.1 461.2Q954.6 461.2 972.8 470Q991 478.9 1000.4 494.2Q1009.7 509.5 1009.7 528.5Q1009.7 550.9 998.5 565Q987.3 579.2 972.3 584.3V585.6Q991.7 592.1 1002.9 607Q1014.1 622 1014.1 645.5Q1014.1 666.5 1004.5 682.7Q994.8 698.8 976.2 708Q957.7 717.2 932.2 717.2Q891.4 717.2 867.1 697.1Q842.8 677.1 841.4 636.6H897.9Q898.2 651.6 906.4 660.2Q914.5 668.9 930.2 668.9Q943.4 668.9 950.7 661.3Q958 653.6 958 641Q958 624.7 947.7 617.4Q937.3 610.1 914.5 610.1H903.6V562.8H914.5Q931.9 562.8 942.6 556.9Q953.3 550.9 953.3 535.6Q953.3 523.4 946.5 516.6Q939.7 509.8 927.8 509.8Q914.9 509.8 908.6 517.6Q902.3 525.4 901.3 537H844.5Q845.9 500.6 868.3 480.9Q890.7 461.2 929.1 461.2Z" />
+    <path
+        android:fillColor="@color/clock_face_numeral"
+        android:pathData="M588.9 834.8Q569.5 834.8 561 851.6Q552.5 868.4 552.1 904.8Q559.6 892.9 573.7 886.1Q587.8 879.3 604.8 879.3Q638.1 879.3 658.4 900.4Q678.6 921.5 678.6 959.2Q678.6 984 668.6 1002.7Q658.5 1021.4 639.3 1032Q620.1 1042.5 594 1042.5Q541.6 1042.5 521.2 1009.7Q500.8 976.9 500.8 915.4Q500.8 850.8 522.4 819.3Q544 787.9 591.6 787.9Q617.1 787.9 634.6 797.9Q652.1 807.9 661.1 824.2Q670.1 840.6 671.8 859.9H617.8Q615 847.4 608.2 841.1Q601.4 834.8 588.9 834.8ZM556.9 958.5Q556.9 974.9 565.9 984Q574.9 993.2 591.6 993.2Q606.5 993.2 615.2 984.2Q623.9 975.2 623.9 959.6Q623.9 943.6 615.4 934.4Q606.9 925.2 590.9 925.2Q576.3 925.2 566.6 933.9Q556.9 942.6 556.9 958.5Z" />
+    <path
+        android:fillColor="@color/clock_face_numeral"
+        android:pathData="M250.6 669.3Q268.6 669.3 276.1 653.3Q283.6 637.3 283.6 601.3Q276.1 611.8 263.2 617.6Q250.2 623.4 234.3 623.4Q212.5 623.4 195.5 614.3Q178.5 605.3 168.8 587.5Q159.1 569.6 159.1 544.1Q159.1 519 169.5 500.3Q179.9 481.6 199.1 471.4Q218.3 461.2 244.5 461.2Q294.8 461.2 314.8 492.5Q334.9 523.7 334.9 584.6Q334.9 628.8 326.9 657.5Q318.9 686.3 300.1 701.2Q281.2 716.2 248.6 716.2Q222.7 716.2 204.5 706Q186.3 695.8 176.6 679.1Q166.9 662.5 165.6 642.4H219.3Q224.4 669.3 250.6 669.3ZM278.8 545.2Q278.8 528.8 270 520Q261.1 511.2 246.2 511.2Q231.2 511.2 222.5 520.2Q213.9 529.2 213.9 544.8Q213.9 559.4 222.5 568.4Q231.2 577.5 247.5 577.5Q261.8 577.5 270.3 568.8Q278.8 560.1 278.8 545.2Z" />
+    </group>
+</vector>

@@ -286,6 +286,16 @@
                 android:resource="@xml/analog_appwidget" />
         </receiver>
 
+        <activity
+            android:name="com.android.alarmclock.AnalogAppWidgetConfigurationActivity"
+            android:exported="true"
+            android:label="@string/select_clock_face"
+            android:theme="@style/Theme.DeskClock">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
         <receiver
             android:name="com.android.alarmclock.DigitalAppWidgetProvider"
             android:exported="true"

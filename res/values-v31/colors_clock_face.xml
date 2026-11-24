@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<resources>
+    <color name="clock_face_screen">@android:color/system_neutral1_900</color>
+    <color name="clock_face_panel">@android:color/system_neutral1_800</color>
+    <color name="clock_face_dial">@android:color/system_neutral1_900</color>
+    <color name="clock_face_hand_minute">@android:color/system_accent1_100</color>
+    <color name="clock_face_hand_hour">@android:color/system_accent2_400</color>
+    <color name="clock_face_numeral">@android:color/system_accent2_500</color>
+    <color name="clock_face_second">@android:color/system_accent1_100</color>
+    <color name="clock_face_second_dot">@android:color/system_accent3_200</color>
+    <color name="clock_face_badge">@android:color/system_accent2_500</color>
+    <color name="clock_face_on_surface">@android:color/system_neutral1_100</color>
+    <color name="clock_face_on_badge">@android:color/system_accent2_100</color>
+    <color name="clock_face_date_text">@android:color/system_neutral1_100</color>
+</resources>

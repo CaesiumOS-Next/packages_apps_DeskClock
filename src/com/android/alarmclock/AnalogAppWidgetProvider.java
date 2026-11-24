@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2009 The Android Open Source Project
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +31,7 @@ import com.android.deskclock.Utils;
 import com.android.deskclock.data.DataModel;
 
 /**
- * Simple widget to show an analog clock.
+ * Simple widget to show an analog clock with Material 3 Expressive styles.
  */
 public class AnalogAppWidgetProvider extends AppWidgetProvider {
 
@@ -59,18 +60,40 @@ public class AnalogAppWidgetProvider extends AppWidgetProvider {
         super.onUpdate(context, wm, widgetIds);
 
         for (int widgetId : widgetIds) {
-            final String packageName = context.getPackageName();
-            final RemoteViews widget = new RemoteViews(packageName, R.layout.analog_appwidget);
-
-            // Tapping on the widget opens the app (if not on the lock screen).
-            if (Utils.isWidgetClickable(wm, widgetId)) {
-                final Intent openApp = new Intent(context, DeskClock.class);
-                final PendingIntent pi = PendingIntent.getActivity(context, 0, openApp,
-                        PendingIntent.FLAG_IMMUTABLE);
-                widget.setOnClickPendingIntent(R.id.analog_appwidget, pi);
-            }
-
-            wm.updateAppWidget(widgetId, widget);
+            updateAppWidget(context, wm, widgetId);
         }
+    }
+
+    public static void updateAppWidget(Context context, AppWidgetManager wm, int widgetId) {
+        int style = WidgetUtils.getAnalogWidgetStyle(context, widgetId);
+        int layoutId;
+        switch (style) {
+            case WidgetUtils.STYLE_NUMERAL:
+                layoutId = R.layout.analog_appwidget_numeral;
+                break;
+            case WidgetUtils.STYLE_DAY:
+                layoutId = R.layout.analog_appwidget_day;
+                break;
+            case WidgetUtils.STYLE_CLOVER:
+                layoutId = R.layout.analog_appwidget_clover;
+                break;
+            case WidgetUtils.STYLE_SCALLOP:
+            default:
+                layoutId = R.layout.analog_appwidget_scallop;
+                break;
+        }
+
+        final String packageName = context.getPackageName();
+        final RemoteViews widget = new RemoteViews(packageName, layoutId);
+
+        // Tapping on the widget opens the app (if not on the lock screen).
+        if (Utils.isWidgetClickable(wm, widgetId)) {
+            final Intent openApp = new Intent(context, DeskClock.class);
+            final PendingIntent pi = PendingIntent.getActivity(context, 0, openApp,
+                    PendingIntent.FLAG_IMMUTABLE);
+            widget.setOnClickPendingIntent(R.id.analog_appwidget, pi);
+        }
+
+        wm.updateAppWidget(widgetId, widget);
     }
 }

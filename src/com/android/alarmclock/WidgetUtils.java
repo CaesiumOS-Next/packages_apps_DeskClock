@@ -120,4 +120,21 @@ public final class WidgetUtils {
         }
         return layoutIds;
     }
+
+    private static final String PREF_ANALOG_STYLE_PREFIX = PREF_PREFIX_KEY + "analog_style_";
+    public static final int STYLE_SCALLOP = 0;
+    public static final int STYLE_NUMERAL = 1;
+    public static final int STYLE_DAY = 2;
+    public static final int STYLE_CLOVER = 3;
+
+    public static void saveAnalogWidgetStyle(Context context, int appWidgetId, int style) {
+        context.getSharedPreferences(PREFS_NAME, 0).edit()
+                .putInt(PREF_ANALOG_STYLE_PREFIX + appWidgetId, style)
+                .commit();
+    }
+
+    public static int getAnalogWidgetStyle(Context context, int appWidgetId) {
+        return context.getSharedPreferences(PREFS_NAME, 0)
+                .getInt(PREF_ANALOG_STYLE_PREFIX + appWidgetId, STYLE_SCALLOP);
+    }
 }
